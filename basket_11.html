@@ -186,11 +186,20 @@
 
     <script>
 
-        let itemPrice = document.getElementsByClassName('item-price');
+        let itemPrice = document.querySelectorAll('.item-price');
+        const button = document.querySelector('button');
 
-        let finalPrice = function () {
-            console.log(itemPrice(num) - (itemPrice(num) * 0.2));
+
+
+
+
+        function finalPrice()
+
+        button.onclick = function () {
+            let discoutPrice = Number(itemPrice.value) * 0.2;
+            alert(discoutPrice);
         }
+
 
 
     </script>
