@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/chat_12.css">
+</head>
+
+<body class="body">
+
+    <main class="main">
+        <fieldset class="main-fieldset">
+            <legend class="legend">Оставьте ваш комментарий</legend>
+
+            <form class="form">
+
+                <label for="name">Введите ваше ФИО:</label>
+                <input id="name" class="form-input form-input_name" type="text">
+
+                <label for="picture">Введите ссылку вашего аватара:</label>
+                <input id="picture" class="form-input form-input_link">
+
+                <label for="message">Оставьте комментарий:</label>
+                <textarea id="message" class="form-input form-input_comment"></textarea>
+
+            </form>
+
+            <button id="button" type="button" class="btn btn-primary">Отправить</button>
+
+        </fieldset>
+
+        <fieldset class="aside-fieldset">
+            <legend class="legend">Чат</legend>
+            <div class="result">
+                <img id="avatar" scr="" alt="user avatar"></img>
+                <p id="nick"></p>
+                <p id="chatMessage"></p>
+            </div>
+        </fieldset>
+    </main>
+
+    <aside class="aside">
+        <h3>Сервис комментариев со спам-фильтром</h3>
+    </aside>
+
+    <script>
+
+        /* Не работает корректно, возвращает только саму ссылку:
+
+        let picrure = document.getElementById("picture");
+        let avatar = document.getElementById("avatar");
+
+        picture.addEventListener('change', () => {
+            avatar.src = URL.createObjectURL(picrure.files[0]);
+            avatar.style.display = "block";
+        });
+        */
+
+
+        document.querySelector('#button').addEventListener('click', () => {
+            let nameData = document.querySelector('#name').value;
+            let nameDataFirstLetter = nameData.slice(0, 1).toUpperCase();
+            let nameDataOtherLetters = nameData.slice(1).toLowerCase();
+            let fullNameData = nameDataFirstLetter + nameDataOtherLetters;
+            document.querySelector('#nick').innerHTML = fullNameData;
+
+            let picrure = document.getElementById('picture');
+            let avatar = document.getElementById('avatar');
+
+            /*Не работает корректно. Возвращает только самы ссылку: 
+
+            let picture = document.querySelector('#picture').value;
+            document.querySelector('#avatar').innerHTML = picture;
+            */
+
+            let message = document.querySelector('#message').value;
+            document.querySelector('#chatMessage').innerHTML += message.replace(/viagra/i, "*ups!*");
+        });
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
