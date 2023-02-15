@@ -23,8 +23,8 @@
                 <label for="name">Введите ваше ФИО:</label>
                 <input id="name" class="form-input form-input_name" type="text">
 
-                <label for="picture">Введите ссылку вашего аватара:</label>
-                <input id="picture" class="form-input form-input_link">
+                <label for="picture">Введите ссылку для вашего аватара:</label>
+                <input id="picture" class="form-input form-input_link" type="text">
 
                 <label for="message">Оставьте комментарий:</label>
                 <textarea id="message" class="form-input form-input_comment"></textarea>
@@ -37,12 +37,17 @@
 
         <fieldset class="aside-fieldset">
             <legend class="legend">Чат</legend>
-            <div class="result">
-                <img id="avatar" scr="" alt="user avatar"></img>
-                <p id="nick"></p>
-                <p id="chatMessage"></p>
+            <div class="resultimage">
+                <img alt="avatar" id="avatar" src=""></img>
             </div>
+            <div class="result">
+                <p id="nick"></p>
+            </div>
+            <div class="result">
+                <p id="chatMessage"></p>
+            </div>  
         </fieldset>
+
     </main>
 
     <aside class="aside">
@@ -50,19 +55,6 @@
     </aside>
 
     <script>
-
-        /* Не работает корректно, возвращает только саму ссылку:
-
-        let picrure = document.getElementById("picture");
-        let avatar = document.getElementById("avatar");
-
-        picture.addEventListener('change', () => {
-            avatar.src = URL.createObjectURL(picrure.files[0]);
-            avatar.style.display = "block";
-        });
-        */
-
-
         document.querySelector('#button').addEventListener('click', () => {
             let nameData = document.querySelector('#name').value;
             let nameDataFirstLetter = nameData.slice(0, 1).toUpperCase();
@@ -70,17 +62,11 @@
             let fullNameData = nameDataFirstLetter + nameDataOtherLetters;
             document.querySelector('#nick').innerHTML = fullNameData;
 
-            let picrure = document.getElementById('picture');
-            let avatar = document.getElementById('avatar');
-
-            /*Не работает корректно. Возвращает только самы ссылку: 
-
-            let picture = document.querySelector('#picture').value;
-            document.querySelector('#avatar').innerHTML = picture;
-            */
-
             let message = document.querySelector('#message').value;
             document.querySelector('#chatMessage').innerHTML += message.replace(/viagra/i, "*ups!*");
+
+            let picture = document.querySelector('#picture');
+            document.querySelector('#avatar').src = picture.value;
         });
 
     </script>
