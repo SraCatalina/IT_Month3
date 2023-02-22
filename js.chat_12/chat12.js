@@ -1,0 +1,78 @@
+let today = new Date();
+
+
+
+
+document.querySelector("#button").addEventListener("click", () => {
+//nickname upload
+  let nameData = document.querySelector("#name").value;
+  let nameDataFirstLetter = nameData.slice(0, 1).toUpperCase();
+  let nameDataOtherLetters = nameData.slice(1).toLowerCase();
+  let fullNameData = nameDataFirstLetter + nameDataOtherLetters;
+  document.querySelector("#nick").innerHTML = fullNameData;
+
+//message upload 
+  let message = document.querySelector("#message").value;
+  document.querySelector("#chatMessage").innerHTML += message.replace(
+    /viagra/i,
+    "*ups!*"
+  );
+
+//avatar upload
+  let picture = document.querySelector("#picture");
+  document.querySelector("#avatar").src = picture.value;
+
+//add a correct number for month:
+  let date = new Date();
+  let monthNumber = new Date().getMonth();
+  let month =
+    monthNumber === 0
+      ? "01"
+      : monthNumber === 1
+      ? "02"
+      : monthNumber === 2
+      ? "03"
+      : monthNumber === 3
+      ? "04"
+      : monthNumber === 4
+      ? "05"
+      : monthNumber === 5
+      ? "06"
+      : monthNumber === 6
+      ? "07"
+      : monthNumber === 7
+      ? "08"
+      : monthNumber === 8
+      ? "09"
+      : monthNumber === 9
+      ? "10"
+      : monthNumber === 10
+      ? "11"
+      : monthNumber === 11
+      ? "12"
+      : "Неизвестный месяц";
+
+//add a date in comments:
+  let today =
+    new Date().getFullYear() +
+    "/" +
+    month +
+    "/" +
+    new Date().getDay() +
+    " " +
+    new Date().getHours() +
+    ":" +
+    new Date().getMinutes();
+
+  document.getElementById("nickMessage").innerHTML =
+    "Пeрвый комментарий:" + " " + today;
+
+  document.getElementById("uploadMessage").innerHTML += 
+    "Последний комментарий:" + " " + today;
+
+});
+
+
+
+
+

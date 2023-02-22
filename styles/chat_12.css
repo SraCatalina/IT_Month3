@@ -58,3 +58,9 @@ img {
     color: rgb(25, 25, 111);
     text-align: center;
 }
+
+#nickMessage, #uploadMessage {
+    border: red solid 1px;
+    font-size: x-small;
+}
+
