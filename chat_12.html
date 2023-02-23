@@ -23,6 +23,13 @@
       <fieldset class="main-fieldset">
         <legend class="legend">Оставьте ваш комментарий</legend>
 
+      <div> Do you want to sign your post:
+          <input id="yes" type="radio" name="question">
+          <label for="yes">Yes</label>
+          <input id="no" type="radio" name="question">
+          <label for="no">No</label>
+      </div>
+      
         <form class="form">
           <label for="name">Введите ваше ФИО:</label>
           <input id="name" class="form-input form-input_name" type="text" />
@@ -37,7 +44,7 @@
           ></textarea>
         </form>
 
-        <button id="button" type="button" class="btn btn-primary">
+        <button id="button" type="button" class="btn btn-primary" onclick="confirmName()">
           Отправить
         </button>
       </fieldset>
@@ -62,7 +69,7 @@
       <h3>Сервис комментариев со спам-фильтром</h3>
     </aside>
 
-    <script src="./js.chat_12/chat12.js"></script>
+    <script src="./js/chat12.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

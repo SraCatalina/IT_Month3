@@ -60,7 +60,6 @@ img {
 }
 
 #nickMessage, #uploadMessage {
-    border: red solid 1px;
-    font-size: x-small;
+        font-size: x-small;
 }
 
