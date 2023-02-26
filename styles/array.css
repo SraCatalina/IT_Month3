@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(252, 245, 245) ;
+}
+
+h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+}
+
+.names, .careers, .films {
+    padding-left: 15px;
+}
+
+.names {
+    background-color: rgb(243, 227, 227) ;
+}
+
+.careers {
+    height: 50px;
+    border-bottom: 1px solid rgb(181, 162, 162);
+}
+
+.films {
+    background-color: rgb(243, 227, 227) ;
+    border-bottom: 1px solid rgb(181, 162, 162);
+    height: 100px;
+    text-align: center;
+    font-weight: 600;
+}
