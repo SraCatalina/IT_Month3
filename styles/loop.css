@@ -1,0 +1,38 @@
+h3 {
+    border: rgb(137, 165, 186) 2px dotted;
+    border-radius: 25px;
+    background-color: rgb(227, 227, 237);
+
+    width: 50%;
+    height: 100px;
+    text-align:center;
+    margin-top: 1em;
+    padding-top: 25px;
+}
+
+.task-input, .task-list {
+    border: rgb(137, 165, 186) 2px dotted;
+    border-radius: 25px;
+    background-color: rgb(227, 227, 237);
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 2em;
+    margin-top: 2em;    
+    text-align: center;
+    align-items: center;
+
+}
+
+.btn {
+    width: 200px;
+    border-radius: 25px;
+    margin-bottom: 12px;
+}
+
+.message {
+    width: 80%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
