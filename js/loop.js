@@ -2,17 +2,20 @@
 // input для ввода текста задачи и 
 // кнопка для её добавления в «Список задач». 
 
+let message = document.getElementById('message').value;
+let buttonAdd = document.getElementById('buttonAdd');
+let buttonClear = document.getElementById('buttonClear');
+
+buttonAdd.addEventListener('click', () => {
 let 
+
+});
 
 
 /* 
 
 
 
-
-
-- Ниже должен быть «Список задач» и 
-- кнопка «Очистить список». 
 
 - Когда задач нет, должно быть серое уведомление о том, что задачи отсутствуют, а кнопка «Очистить список» должна быть неактивна. 
 

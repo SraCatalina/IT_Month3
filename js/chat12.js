@@ -66,16 +66,13 @@ document.querySelector("#button").addEventListener("click", () => {
 });
 
 //check-box 
-let
 const checkbox = document.getElementById('yes');
-
 if (checkbox.checked) {
   ;
 }
 else {
-
 }
 
-
-
+// let user;
+//alert(user ?? "Аноним"); // Аноним (user не существует)
 
