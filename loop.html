@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="./styles/loop.css" />
   </head>
   <body>
-    <main>
+    <main class="main">
       <h3>Планировщик задач</h3>
 
       <div class="task-input">
-        <label>Введите задачу:</label>
+        <h4>Введите задачу:</h4>
         <input id="message" class="message" type="text" />
 
         <button id="buttonAdd" class="btn btn-light">Добавить в лист</button>
@@ -27,9 +27,13 @@
 
       <div class="task-list">
         <h4>Список задач:</h4>
-        <ol id="list"></ol>
-        <button id="buttonClear" class="btn btn-dark">Очистить список</button>
+        <ol id="listOfTasks"></ol>
+        <button id="buttonClear" class="btn btn-dark" disabled>
+          Очистить список
+        </button>
       </div>
+
+      <div id="alert">Внимание, вы пока не ввели ни одной задачи!</div>
     </main>
 
     <script src="./js/loop.js"></script>

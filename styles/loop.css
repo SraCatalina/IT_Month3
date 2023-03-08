@@ -7,7 +7,7 @@ h3 {
     height: 100px;
     text-align:center;
     margin-top: 1em;
-    padding-top: 25px;
+    padding-top: 28px;
 }
 
 .task-input, .task-list {
@@ -19,7 +19,9 @@ h3 {
     flex-direction: column;
     width: 50%;
     margin-bottom: 2em;
-    margin-top: 2em;    
+    margin-top: 2em;
+    padding-top: 15px;
+    
     text-align: center;
     align-items: center;
 
@@ -35,4 +37,23 @@ h3 {
     width: 80%;
     border-radius: 20px;
     margin-bottom: 10px;
+}
+
+#alert {
+    position: absolute;
+    right: 70px;
+    top: 25px;   
+
+    border: rgb(137, 165, 186) 2px dotted;
+    border-radius: 25px;
+    background-color: rgb(110, 110, 201); 
+    width: 35%;
+    height: 15%;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.none {
+    display: none;
 }
