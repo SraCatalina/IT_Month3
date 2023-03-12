@@ -1,12 +1,19 @@
 // input для ввода текста задачи и кнопка для добавления в «Список задач». 
+
 const message = document.querySelector('#message');
 const buttonAdd = document.querySelector('#buttonAdd');
 const buttonClear = document.querySelector('#buttonClear');
 const tasksList = document.querySelector('#listOfTasks');
 const alertMessage = document.querySelector('#alert');
 
+const arrayTasks = [];
+
+
 // Когда задач нет - серое уведомление о том, что задачи отсутствуют, а кнопка «Очистить список» должна быть неактивна. При добавлении задачи в список, каждая из них должна появляться в списке задач и напротив иметь неактивный чекбокс & чекбокс напротив задачи должен менять своё состояние при клике (говоря нам, что задача выполнена). 
-buttonAdd.addEventListener('click', function (event) {
+
+buttonAdd.addEventListener('click', addTask);
+
+function addTask (event) {
     event.preventDefault(); 
 
     let taskText = message.value;
@@ -27,15 +34,15 @@ buttonAdd.addEventListener('click', function (event) {
     }
 
     message.value = "";
-    
-});
+};
 
 
+// При клике на кнопку «Очистить список» все задачи должны удаляться. 
 
-/* 
+buttonClear.addEventListener('click', cleanTask);
 
-- Каждый чекбокс напротив задачи должен менять своё состояние при клике (говоря нам, что задача выполнена). 
+function cleanTask (event) {
+    event.preventDefault(); 
+    tasksList.innerHTML = "";
+};
 
-- При клике на кнопку «Очистить список» все задачи должны удаляться. 
-
-*/

@@ -1,7 +1,7 @@
 h3 {
     border: rgb(137, 165, 186) 2px dotted;
     border-radius: 25px;
-    background-color: rgb(227, 227, 237);
+    background-color: rgb(227, 227, 237, 0.5);
 
     width: 50%;
     height: 100px;
@@ -13,7 +13,7 @@ h3 {
 .task-input, .task-list {
     border: rgb(137, 165, 186) 2px dotted;
     border-radius: 25px;
-    background-color: rgb(227, 227, 237);
+    background-color: rgb(227, 227, 237, 0.5);
 
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@ h3 {
     padding-left: 12px;
 }
 
-#alert {
+#alert, .alert {
     position: absolute;
     right: 70px;
     top: 25px;   
@@ -54,7 +54,7 @@ h3 {
     height: 15%;
     color: aliceblue;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 .none {
