@@ -55,7 +55,7 @@ document.querySelector("#button").addEventListener("click", () => {
       /viagra/i,
       "*ups!*");
 
-  //avatar upload 
+  //avatar upload  
   let picture = document.querySelector("#picture");
   document.querySelector("#avatar").src = picture.value;
 
