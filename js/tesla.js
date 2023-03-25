@@ -1,7 +1,9 @@
 const listOfModels = document.querySelector('.listOfModels');
 const priceList = document.querySelector('.priceList');
+const list = document.querySelector('#list');
 
-// Open model types
+
+// STEP 1. Choose model type
 
 const teslaCars = [
 {type: 'Model 3', price: [42990]},
@@ -14,26 +16,67 @@ const teslaCars = [
 {type: 'Model X Plaid', price: [109990]},
 ];
 
-let priceForModel3 = teslaCars[0].price;
-let priceForModel3Performance = teslaCars[1].price;
-let priceForModelYLong = teslaCars[2].price;
-let priceForModelYPerformance = teslaCars[3].price;
-let priceForModelS = teslaCars[4].price;
-let priceForModelSPlaid = teslaCars[5].price;
-let priceForModelX = teslaCars[6].price;
-let priceForModelXPlaid = teslaCars[7].price;
+const model3 = teslaCars[0].type;
+const model3Performance = teslaCars[1].type;
+const modelYLongRange = teslaCars[2].type;
+const modelYPerformance = teslaCars[3].type;
+const modelS = teslaCars[4].type;
+const modelSPlaid = teslaCars[5].type;
+const modelX = teslaCars[6].type;
+const modelXPlaid = teslaCars[7].type;
 
+const priceForModel3 = teslaCars[0].price;
+const priceForModel3Performance = teslaCars[1].price;
+const priceForModelYLong = teslaCars[2].price;
+const priceForModelYPerformance = teslaCars[3].price;
+const priceForModelS = teslaCars[4].price;
+const priceForModelSPlaid = teslaCars[5].price;
+const priceForModelX = teslaCars[6].price;
+const priceForModelXPlaid = teslaCars[7].price;
 
+const resultModel3 =`Starting price for ${model3} is ${priceForModel3}`;
+const resultModel3Performance =`Starting price for ${model3Performance} is ${priceForModel3Performance}`;
+const resultModelYLongRange =`Starting price for ${modelYLongRange} is ${priceForModelYLong}`;
+const resultModelYPerformance =`Starting price for ${modelYPerformance} is ${priceForModelYPerformance}`;
+const resultModelS =`Starting price for ${modelS} is ${priceForModelS}`;
+const resultModelSPlaid =`Starting price for ${modelSPlaid} is ${priceForModelSPlaid}`;
+const resultModelX =`Starting price for ${modelX} is ${priceForModelX}`;
+const resultModelXPlaid =`Starting price for ${modelXPlaid} is ${priceForModelXPlaid}`;
 
 function addModelInPriceList () {
-    
-    priceList.innerHTML = listOfModels.value;
+
+    let resultModelAndPrice = undefined;
+
+    if (listOfModels.value == 'model3') {
+        resultModelAndPrice = resultModel3;
+    } else if (listOfModels.value == 'model3P') {
+        resultModelAndPrice = resultModel3Performance;
+    } else if (listOfModels.value == 'modelYLong') {
+        resultModelAndPrice = resultModelYLongRange;
+    } else if (listOfModels.value == 'modelYP') {
+        resultModelAndPrice = resultModelYPerformance;
+    } else if (listOfModels.value == 'modelS') {
+        resultModelAndPrice = resultModelS;
+    } else if (listOfModels.value == 'modelSPlaid') {
+        resultModelAndPrice = resultModelSPlaid;
+    } else if (listOfModels.value == 'modelX') {
+        resultModelAndPrice = resultModelX;
+    } else if (listOfModels.value == 'modelXPlaid') {
+        resultModelAndPrice = resultModelXPlaid;
+    };
+
+    priceList.innerHTML = resultModelAndPrice;
 };
 
 
+ // STEP 2. Choose color
 
 
- // color
+    //let modelHtml = `<p class="priceList""> ${resultModelAndPrice} </p>`;
+    //list.insertAdjacentHTML('beforeend', modelHtml);
+
+
+
 
 /*
     let selectInputs = document.querySelectorAll('select');
