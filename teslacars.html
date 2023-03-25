@@ -16,8 +16,135 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/tesla.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="body">
+    <main class="main">
+      <form class="form">
+        <div class="space">
+          <h5>Model</h5>
+          <select class="listOfModels" onchange="addModelInPriceList()">
+            <option value="model3">Model 3</option>
+            <option value="model3P">Model 3 Performance</option>
+            <option value="modelYLong">Model Y Long Range</option>
+            <option value="modelYP">Model Y Performance</option>
+            <option value="modelS">Model S</option>
+            <option value="modelSPlaid">Model S Plaid</option>
+            <option value="modelX">Model X</option>
+            <option value="modelXPlaid">Model X Plaid</option>
+          </select>
+        </div>
+
+        <div class="space">
+          <h5>Colour</h5>
+          <select onchande="">
+            <option value="white" selected>Perl White</option>
+            <option value="black">Solid Black (+ 1,500$)</option>
+            <option value="silver">Midnight Silver metallic (+ 1,500$)</option>
+            <option value="blue">Deep Blue metallic (+ 1,500$)</option>
+            <option value="red">Ultra Red (+ 3,000$)</option>
+          </select>
+        </div>
+
+        <div class="space">
+          <h5>Wheels</h5>
+          <select onchange="">
+            <option class="wheels wheels__modelX" value="">
+              20' cyberstream
+            </option>
+            <option class="wheels wheels__modelX" value="">
+              22' turbine (+ 5,500$)
+            </option>
+
+            <option class="wheels wheels__modelS" value="">19' tempest</option>
+            <option class="wheels wheels__modelS" value="">
+              21' arachnid (+ 4,500$)
+            </option>
+
+            <option class="wheels wheels__modelY" value="">19' gemini</option>
+            <option class="wheels wheels__modelY" value="">
+              20' induction (+ 2,000$)
+            </option>
+
+            <option class="wheels wheels__model3" value="">18' aero</option>
+            <option class="wheels wheels__model3" value="">
+              19' sport (+ 1,500$)
+            </option>
+          </select>
+        </div>
+
+        <div class="space">
+          <h5>Interior</h5>
+          <select onchange="">
+            <option value="BlackBlack" selected>All Black</option>
+            <option value="BlackAndWhite">Black & White (+ 1,000$)</option>
+            <option value="Cream" disabled>Cream (+ 2,000$)</option>
+          </select>
+        </div>
+
+        <div class="space">
+          <h5>Advanced</h5>
+          <input
+            class="additionalOption"
+            type="checkbox"
+            name="option1"
+            id=""
+            value="autopilotHalf"
+          />
+          <label class="checkbox" for="option1">Autopilot (+ 6,000$)</label>
+
+          <input
+            class="additionalOption"
+            type="checkbox"
+            name="option2"
+            id=""
+            value="autopilotFull"
+          />
+          <label class="checkbox" for="option2"
+            >Full self-driving capability (+ 15,000$)</label
+          >
+
+          <input
+            class="additionalOption"
+            type="checkbox"
+            name="option3"
+            id=""
+            value="charging"
+          />
+          <label class="checkbox" for="option3">Charging (+ 500$)</label>
+
+          <input
+            class="additionalOption"
+            type="checkbox"
+            name="option4"
+            id=""
+            value="hitch"
+            disabled
+          />
+          <label class="checkbox" for="option4">Tow hitch (+ 1,000$)</label>
+        </div>
+        <div class="space">
+          <button class="button" type="submit">Get your final price</button>
+        </div>
+      </form>
+    </main>
+
+    <section class="images">
+      <img alt="car" />
+    </section>
+
+    <section class="resultList">
+      <div class="space">
+        <h5>Your modifications:</h5>
+        <p class="priceList"></p>
+      </div>
+    </section>
+
     <script src="./js/tesla.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -30,4 +157,5 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  <footer class="footer"></footer>
 </html>
