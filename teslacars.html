@@ -28,7 +28,12 @@
       <form class="form">
         <div class="space">
           <h5>Model</h5>
-          <select class="listOfModels" onchange="addModelInPriceList()">
+          <select
+            class="listOfModels"
+            onchange="addModelInPriceList()"
+            required
+          >
+            <option value="notAnOption">Choose model type</option>
             <option value="model3">Model 3</option>
             <option value="model3P">Model 3 Performance</option>
             <option value="modelYLong">Model Y Long Range</option>
@@ -42,48 +47,67 @@
 
         <div class="space">
           <h5>Colour</h5>
-          <select onchande="">
+          <select
+            class="listOfColors"
+            onchange="addColorInPriceList()"
+            disabled
+          >
             <option value="white" selected>Perl White</option>
-            <option value="black">Solid Black (+ 1,500$)</option>
-            <option value="silver">Midnight Silver metallic (+ 1,500$)</option>
-            <option value="blue">Deep Blue metallic (+ 1,500$)</option>
-            <option value="red">Ultra Red (+ 3,000$)</option>
+            <option value="black">Solid Black</option>
+            <option value="silver">Midnight Silver metallic</option>
+            <option value="blue">Deep Blue metallic</option>
+            <option value="red">Ultra Red</option>
           </select>
         </div>
 
         <div class="space">
           <h5>Wheels</h5>
-          <select onchange="">
-            <option class="wheels wheels__modelX" value="">
+          <select
+            class="listOfWheels"
+            onchange="addWheelsInPriceList()"
+            disabled
+          >
+            <option value="notAnOption">Choose wheels</option>
+            <option class="wheelsX" value="modelX" id="modelX20">
               20' cyberstream
             </option>
-            <option class="wheels wheels__modelX" value="">
-              22' turbine (+ 5,500$)
+            <option class="wheelsX" value="modelXP" id="modelX22">
+              22' turbine
             </option>
 
-            <option class="wheels wheels__modelS" value="">19' tempest</option>
-            <option class="wheels wheels__modelS" value="">
-              21' arachnid (+ 4,500$)
+            <option class="wheelsS" value="modelS" id="modelS19">
+              19' tempest
+            </option>
+            <option class="wheelsS" value="modelSP" id="modelS21">
+              21' arachnid
             </option>
 
-            <option class="wheels wheels__modelY" value="">19' gemini</option>
-            <option class="wheels wheels__modelY" value="">
-              20' induction (+ 2,000$)
+            <option class="wheelsY" value="modelY" id="modelY19">
+              19' gemini
+            </option>
+            <option class="wheelsY" value="modelYP" id="modelY20">
+              20' induction
             </option>
 
-            <option class="wheels wheels__model3" value="">18' aero</option>
-            <option class="wheels wheels__model3" value="">
-              19' sport (+ 1,500$)
+            <option class="wheels3" value="model3" id="model318">
+              18' aero
+            </option>
+            <option class="wheels3" value="model3P" id="model319">
+              19' sport
             </option>
           </select>
         </div>
 
         <div class="space">
           <h5>Interior</h5>
-          <select onchange="">
+          <select
+            class="listOfInterior"
+            onchange="addInteriorInPriceList()"
+            disabled
+          >
             <option value="BlackBlack" selected>All Black</option>
-            <option value="BlackAndWhite">Black & White (+ 1,000$)</option>
-            <option value="Cream" disabled>Cream (+ 2,000$)</option>
+            <option value="BlackAndWhite">Black & White</option>
+            <option value="Cream" disabled>Cream</option>
           </select>
         </div>
 
@@ -93,40 +117,43 @@
             class="additionalOption"
             type="checkbox"
             name="option1"
-            id=""
+            id="addAutopilot"
             value="autopilotHalf"
+            onchange="addAutopilotOptionInPriceList()"
           />
-          <label class="checkbox" for="option1">Autopilot (+ 6,000$)</label>
+          <label class="checkbox" for="option1">Autopilot</label>
 
           <input
             class="additionalOption"
             type="checkbox"
             name="option2"
-            id=""
+            id="addFullSelfDriving"
             value="autopilotFull"
+            onchange="addAdvancedOptionsInPriceList()"
           />
           <label class="checkbox" for="option2"
-            >Full self-driving capability (+ 15,000$)</label
+            >Full self-driving capability</label
           >
 
           <input
             class="additionalOption"
             type="checkbox"
             name="option3"
-            id=""
+            id="addCharging"
             value="charging"
+            onchange="addAdvancedOptionsInPriceList()"
           />
-          <label class="checkbox" for="option3">Charging (+ 500$)</label>
+          <label class="checkbox" for="option3">Charging</label>
 
           <input
             class="additionalOption"
             type="checkbox"
             name="option4"
-            id=""
+            id="addTowHitch"
             value="hitch"
-            disabled
+            onchange="addAdvancedOptionsInPriceList()"
           />
-          <label class="checkbox" for="option4">Tow hitch (+ 1,000$)</label>
+          <label class="checkbox" for="option4">Tow hitch</label>
         </div>
         <div class="space">
           <button class="button" type="submit">Get your final price</button>
@@ -141,7 +168,11 @@
     <section class="resultList">
       <div class="space" id="list">
         <h5>Your modifications:</h5>
-        <p class="priceList"></p>
+        <p class="resultModel"></p>
+        <p class="resultColor"></p>
+        <p class="resultWheels"></p>
+        <p class="resultInterior"></p>
+        <ul class="resultAdvanced"></ul>
       </div>
     </section>
 

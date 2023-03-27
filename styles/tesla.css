@@ -1,53 +1,62 @@
 .body {
-    background: radial-gradient(circle, rgb(223, 220, 202) 0%, rgba(167,177,189,1) 100%);
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-areas: 
+  background: radial-gradient(
+    circle,
+    rgb(223, 220, 202) 0%,
+    rgba(167, 177, 189, 1) 100%
+  );
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas:
     "main section"
     "result result"
-    "footer footer"
-    ;
-    font-family: 'Raleway', sans-serif;
+    "footer footer";
+  font-family: "Raleway", sans-serif;
 }
 
 .main {
-    grid-area: main;
+  grid-area: main;
 }
 
 .images {
-    grid-area: section;
-    margin-top: 7px;
-    margin-right: 7px;
+  grid-area: section;
+  margin-top: 7px;
+  margin-right: 7px;
 }
 
 .resultList {
-    grid-area: result;
-    
+  grid-area: result;
+  font-size: small;
+  line-height: 2px;
 }
 
 .footer {
-    grid-area: footer;
+  grid-area: footer;
 }
 
 .space {
-    border: rgb(112, 108, 108) 1px solid;
-    border-radius: 3px;
-    background: radial-gradient(circle, rgb(197, 194, 184) 0%, rgb(181, 192, 206) 100%);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 7px;
-    margin-left: 7px;
-    margin-right: 7px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: rgb(112, 108, 108) 1px solid;
+  border-radius: 3px;
+  background: radial-gradient(
+    circle,
+    rgb(197, 194, 184) 0%,
+    rgb(181, 192, 206) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .checkbox {
-    padding-bottom: 12px;
+  padding-bottom: 12px;
 }
 
-.wheels {
-    display: none;
+.wheelsX,
+.wheelsS,
+.wheelsY,
+.wheels3 {
+  display: none;
 }
-
-
