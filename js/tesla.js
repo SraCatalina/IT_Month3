@@ -3,7 +3,6 @@ const listOfModels = document.querySelector(".listOfModels");
 const listOfColors = document.querySelector(".listOfColors");
 const listOfWheels = document.querySelector(".listOfWheels");
 const listOfInterior = document.querySelector(".listOfInterior");
-const additionalOption = document.querySelector(".additionalOption");
 
 const resultModel = document.querySelector(".resultModel");
 const resultColor = document.querySelector(".resultColor");
@@ -297,7 +296,7 @@ function addInteriorInPriceList() {
 
 // STEP 5. Advanced
 
-// если поставлена галочка, создать "ли"
+// если поставлена галочка, создать "li"
 
 const advancedList = [
   { type: "Autopitot", price: [6000] },
@@ -311,35 +310,41 @@ const fullSelfDrivingPrice = advancedList[1].price;
 const chargingPrice = advancedList[2].price;
 const towHitchPrice = advancedList[3].price;
 
+const additionalOption1 = document.querySelector(".additionalOption1");
+
+//выбранные чекбоксы занести в массив, и каждый элемент массива добавить к корзине
+
+function addAutopilotOptionInPriceList() {
+  if ((additionalOption1.checked = true)) {
+    let additionalOptionHtml1 = `<li> Added Autopilot: ${autopitotPrice}$ </li>`;
+    resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml1);
+  }
+}
+
+/*
+
+  else if ((additionalOption.value = "autopilotFull")) {
+    let additionalOptionHtml = `<li> Added Full self-driving: ${autopitotPrice}$ </li>`;
+    resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml);
+  }
+
+
 function addAutopilotOptionInPriceList() {
   let checkboxAutopilot = undefined;
   if ((additionalOption.checked = true)) {
     checkboxAutopilot = `Added Autopilot: ` + autopitotPrice;
-    let additionalOptionHtml = `<li> ${checkboxAutopilot} $ </li>`;
-    resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml);
-  } else if ((additionalOption.checked = false)) {
+  } else additionalOption.checked != true;
+  {
     checkboxAutopilot = "";
-    let additionalOptionHtml = `<li> ${checkboxAutopilot} $ </li>`;
-    resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml);
   }
+
+  let additionalOptionHtml = `<li> ${checkboxAutopilot.checked.value} $ </li>`;
+  resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml);
 
   //let addResultFromCheckbox = checkboxesChecked[0].value;
   //let modelHtml = `<li> ${addResultFromCheckbox} </li>`;
   //resultAdvanced.insertAdjacentHTML("beforeend", modelHtml);
 }
-
-/*
-
-function getCheckedCheckBoxes() {
-  var selectedCheckBoxes = document.querySelectorAll('input.checkbox:checked');
-
-  var checkedValues = Array.from(selectedCheckBoxes).map(cb => cb.value);
-
-  console.log(checkedValues);
-
-  return checkedValues; // для использования в нужном месте
-}
-
 
 
 
@@ -389,6 +394,7 @@ ${resultModelAndPrice}
 resultAdvanced.insertAdjacentHTML('beforeend', modelHtml);
 
 */
+
 /*
     let selectInputs = document.querySelectorAll('select');
     let restInputs = document.querySelector('.additionalOption');
@@ -417,13 +423,17 @@ resultAdvanced.insertAdjacentHTML('beforeend', modelHtml);
 
 //Model S after 'Interior'
 
-<div class="space">
+
+
+
+    let newHtml = `<div class="space">
     <h5>Steering Control</h5>
         <select>
             <option value="steeringWheel" selected>Steering Wheel</option>
             <option value="yokeWheel">Yoke Wheel</option>
         </select>
-</div>
+    </div>`;
+    document.forms.form.insertAdjacentHTML("beforeend", newHtml);
 
 // open cream interior 2,000
 
