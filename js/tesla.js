@@ -294,10 +294,9 @@ function addInteriorInPriceList() {
   resultInterior.innerHTML = resultInteriorsAndPrice + ` $`;
 }
 
-// STEP 5. Advanced
-
+// STEP 5. Advanced ВОПРОСИКИ
 // если поставлена галочка, создать "li"
-
+/*
 const advancedList = [
   { type: "Autopitot", price: [6000] },
   { type: "Full Self-Driving", price: [15000] },
@@ -313,87 +312,18 @@ const towHitchPrice = advancedList[3].price;
 const additionalOption1 = document.querySelector(".additionalOption1");
 
 //выбранные чекбоксы занести в массив, и каждый элемент массива добавить к корзине
-
 function addAutopilotOptionInPriceList() {
   if ((additionalOption1.checked = true)) {
     let additionalOptionHtml1 = `<li> Added Autopilot: ${autopitotPrice}$ </li>`;
     resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml1);
   }
 }
-
-/*
-
-  else if ((additionalOption.value = "autopilotFull")) {
-    let additionalOptionHtml = `<li> Added Full self-driving: ${autopitotPrice}$ </li>`;
-    resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml);
-  }
-
-
-function addAutopilotOptionInPriceList() {
-  let checkboxAutopilot = undefined;
-  if ((additionalOption.checked = true)) {
-    checkboxAutopilot = `Added Autopilot: ` + autopitotPrice;
-  } else additionalOption.checked != true;
-  {
-    checkboxAutopilot = "";
-  }
-
-  let additionalOptionHtml = `<li> ${checkboxAutopilot.checked.value} $ </li>`;
-  resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml);
-
-  //let addResultFromCheckbox = checkboxesChecked[0].value;
-  //let modelHtml = `<li> ${addResultFromCheckbox} </li>`;
-  //resultAdvanced.insertAdjacentHTML("beforeend", modelHtml);
-}
-
-
-
-function addAutopilotOptionInPriceList() {
-  let checkboxAutopilot = undefined;
-  if (additionalOption.value == "autopilotHalf") {
-    checkboxAutopilot = `Added Autopilot: ` + autopitotPrice;
-    let additionalOptionHtml = `<li> ${checkboxAutopilot} $ </li>`;
-    resultAdvanced.insertAdjacentHTML("beforeend", additionalOptionHtml);
-  } else {
-    
-  }
-
-else if (additionalOption.value == "autopilotFull") {
-    checkboxChecked =
-      `Added Full Self-Driving capability: ` + fullSelfDrivingPrice;
-  } else if (additionalOption.value == "charging") {
-    checkboxChecked = `Added Charging: ` + chargingPrice;
-  } else if (additionalOption.value == "hitch") {
-    checkboxChecked = `Added Tow Hitch: ` + towHitchPrice;
-  }
-
-
-
-
-
-function addAdvancedOptionsInPriceList() {
-  let additionalOptions = document.getElementsByClassName(".additionalOption");
-  let checkboxesChecked = [];
-  for (let i = 0; i < additionalOptions.length; i++) {
-    if (additionalOptions[i].checked) {
-      checkboxesChecked.push(additionalOptions[i].value);
-    }
-    return checkboxesChecked;
-  }
-  let addResultFromCheckbox = checkboxesChecked.value;
-  let modelHtml = `<li> ${addResultFromCheckbox} </li>`;
-  resultAdvanced.insertAdjacentHTML("beforeend", modelHtml);
-}
-
-
-
-let modelHtml = `<li></li>`
-
-
-${resultModelAndPrice} 
-resultAdvanced.insertAdjacentHTML('beforeend', modelHtml);
-
 */
+
+// FORMS FINAL RESULT
+
+const form = document.forms.form1;
+const selectModel = form.elements.select;
 
 /*
     let selectInputs = document.querySelectorAll('select');
@@ -421,10 +351,8 @@ resultAdvanced.insertAdjacentHTML('beforeend', modelHtml);
 
 /* 
 
+
 //Model S after 'Interior'
-
-
-
 
     let newHtml = `<div class="space">
     <h5>Steering Control</h5>
@@ -438,9 +366,6 @@ resultAdvanced.insertAdjacentHTML('beforeend', modelHtml);
 // open cream interior 2,000
 
 
-
-
-
 // Model Y after Interior 
 
 <div class="space">
@@ -451,11 +376,11 @@ resultAdvanced.insertAdjacentHTML('beforeend', modelHtml);
         </select>
 </div>
 
+
 // Model Y in advanced
 
 <input type="checkbox" name="option5" id="" value="towHitch" />
 <label class="checkbox" for="option1">Tow Hitch (+ 1,000$)</label>
-
 
 
 // Model X after Interior 
@@ -478,11 +403,5 @@ resultAdvanced.insertAdjacentHTML('beforeend', modelHtml);
 </div>
 
 // open cream interior 2,000
-
-
-
-
-
-//DIV 
 
 */
